@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <title>ピヨピヨランナーズ 🐣</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --yellow: #ffe066;
+      --yellow-soft: #fff6cc;
+      --yellow-soft-2: #fff1b8;
+      --brown: #5a4a2f;
+      --accent: #ffb703;
+      --google: #4285f4;
+      --line: #06c755;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: 'Zen Maru Gothic', sans-serif;
+      background: linear-gradient(180deg, var(--yellow-soft), #ffffff);
+      color: var(--brown);
+    }
+
+    /* ===== HEADER ===== */
+    header {
+      background:
+        radial-gradient(circle at 20% 20%, #fff6cc 0%, transparent 40%),
+        radial-gradient(circle at 80% 30%, #fff1b8 0%, transparent 45%),
+        var(--yellow);
+      padding: 80px 20px 120px;
+      text-align: center;
+      position: relative;
+    }
+
+    header::after {
+      content: '';
+      position: absolute;
+      bottom: -40px;
+      left: 0;
+      width: 100%;
+      height: 80px;
+      background: #ffffff;
+      border-radius: 100% 100% 0 0;
+    }
+
+    .hero {
+      display: inline-flex;
+      align-items: center;
+      gap: 22px;
+      background: #fff;
+      padding: 22px 36px;
+      border-radius: 999px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+    }
+
+    .logo-wrap {
+      width: 130px;
+      height: 130px;
+      background: linear-gradient(180deg, var(--yellow-soft), var(--yellow-soft-2));
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    .logo-wrap img {
+      width: 80%;
+    }
+
+    @keyframes float {
+      0%,100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    /* scroll hint */
+    .scroll {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 0.85rem;
+      opacity: 0.7;
+      animation: fade 2s infinite;
+    }
+
+    @keyframes fade {
+      0%,100% { opacity: .3; }
+      50% { opacity: 1; }
+    }
+
+    /* ===== COMMON ===== */
+    section {
+      padding: 60px 20px;
+      max-width: 960px;
+      margin: auto;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 24px;
+      font-size: 1.8rem;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 28px;
+      padding: 36px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      margin-bottom: 40px;
+      text-align: center;
+      animation: up 0.8s ease both;
+    }
+
+    @keyframes up {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* ===== ABOUT ===== */
+    .about-text {
+      max-width: 640px;
+      margin: 0 auto 28px;
+      font-size: 1.05rem;
+      line-height: 2;
+    }
+
+    figure {
+      margin: 0;
+    }
+
+    figure img {
+      width: 100%;
+      max-width: 520px;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    /* ===== INFO LIST ===== */
+    .info-list {
+      list-style: none;
+      padding: 0;
+      line-height: 1.9;
+      text-align: left;
+      max-width: 520px;
+      margin: 0 auto;
+    }
+
+    .info-list li {
+      background: var(--yellow-soft);
+      border-radius: 16px;
+      padding: 12px 16px;
+      margin-bottom: 12px;
+    }
+
+    /* ===== LINKS ===== */
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    .links a {
+      text-decoration: none;
+      padding: 16px 30px;
+      border-radius: 999px;
+      font-weight: bold;
+      width: 280px;
+      text-align: center;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+      color: #fff;
+      transition: transform .2s;
+    }
+
+    .links a:hover {
+      transform: translateY(-3px);
+    }
+
+    .links a.primary { background: var(--google); }
+    .links a.line { background: var(--line); }
+    .links a.instagram { background: var(--accent); color: var(--brown); }
+
+    footer {
+      background: var(--yellow-soft);
+      text-align: center;
+      padding: 40px 20px;
+      font-size: 0.9rem;
+    }
+
+    footer span {
+      display: block;
+      margin-top: 6px;
+      font-size: 0.8rem;
+      opacity: 0.7;
+    }
+
+    @media (max-width: 480px) {
+      .hero {
+        flex-direction: column;
+      }
+    }
+  </style>
+  <meta name="robots" content="noindex, nofollow">
+</head>
+
+<body>
+
+<header>
+  <div class="hero">
+    <div class="logo-wrap">
+      <img src="logo1.png" alt="ピヨピヨランナーズ ロゴ">
+    </div>
+    <div>
+      <h1>ピヨピヨランナーズ</h1>
+      <p>ゆるく、楽しく、ピヨっと走ろう。</p>
+    </div>
+  </div>
+  <div class="scroll">scroll ↓</div>
+</header>
+
+<section>
+
+  <div class="card">
+    <h2>ピヨピヨランナーズとは？</h2>
+
+    <div class="about-text">
+      ピヨピヨランナーズは、初心者から経験者まで<br>
+      「走るのが好き」「これから始めたい」人が集まる<br>
+      ゆる系ランニングチームです。
+    </div>
+
+    <figure>
+      <img src="piyopiyo.jpg" alt="ピヨピヨランナーズの活動風景" loading="lazy">
+    </figure>
+  </div>
+
+  <div class="card">
+    <h2>活動情報</h2>
+    <ul class="info-list">
+      <li>📅 平日 不定期（月2回）</li>
+      <li>📍 二重橋　</li>
+      <li>⏱ 5〜10km</li>
+      <li>🐢 主にサブスリーと3.5</li>
+      <li>🙆 参加条件なし</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>参加はこちら</h2>
+    <p>まずはお気軽に 🐤</p>
+
+    <div class="links">
+      <a class="primary" href="https://form.run/@hiyorinchan--I2HJdKFwX2Qxrwt3DdNV" target="_blank">
+        Googleフォームで参加
+      </a>
+      <a class="line" href="https://line.me/ti/g2/-IaYlkaAXtKeJy0ErgXntJHVt-0S-v3ej_nI-w" target="_blank">
+        LINEオープンチャットで参加
+      </a>
+      <a class="instagram" href="https://www.instagram.com/hiyorinchan_27" target="_blank">
+        Instagramはこちら
+      </a>
+    </div>
+  </div>
+
+</section>
+
+<footer>
+  © ピヨピヨランナーズ 🐣
+  <span>走る理由は、ピヨっとでいい。</span>
+</footer>
+
+</body>
+</html>
