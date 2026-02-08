@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8" />
-  <title>ぴよぴよランナーズ 🐣</title>
+  <title>ピヨピヨランナーズ 🐣</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;700&display=swap" rel="stylesheet">
@@ -57,6 +57,7 @@
       padding: 22px 36px;
       border-radius: 999px;
       box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+      max-width: 100%;
     }
 
     .logo-wrap {
@@ -79,7 +80,6 @@
       50% { transform: translateY(-10px); }
     }
 
-    /* scroll hint */
     .scroll {
       position: absolute;
       bottom: 20px;
@@ -102,6 +102,8 @@
       margin: auto;
     }
 
+    h1 { margin: 0; }
+
     h2 {
       text-align: center;
       margin-bottom: 24px;
@@ -119,17 +121,10 @@
     }
 
     @keyframes up {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
-    /* ===== ABOUT ===== */
     .about-text {
       max-width: 640px;
       margin: 0 auto 28px;
@@ -137,9 +132,7 @@
       line-height: 2;
     }
 
-    figure {
-      margin: 0;
-    }
+    figure { margin: 0; }
 
     figure img {
       width: 100%;
@@ -148,7 +141,6 @@
       box-shadow: 0 8px 20px rgba(0,0,0,0.1);
     }
 
-    /* ===== INFO LIST ===== */
     .info-list {
       list-style: none;
       padding: 0;
@@ -165,7 +157,6 @@
       margin-bottom: 12px;
     }
 
-    /* ===== LINKS ===== */
     .links {
       display: flex;
       flex-direction: column;
@@ -208,12 +199,55 @@
       opacity: 0.7;
     }
 
+    /* ===== iPhone対応 ===== */
     @media (max-width: 480px) {
+
+      header {
+        padding: 60px 16px 90px;
+      }
+
       .hero {
         flex-direction: column;
+        gap: 14px;
+        padding: 20px;
+        max-width: 320px;
+        margin: 0 auto;
+      }
+
+      .logo-wrap {
+        width: 110px;
+        height: 110px;
+      }
+
+      h1 {
+        font-size: 1.6rem;
+      }
+
+      section {
+        padding: 40px 16px;
+      }
+
+      .card {
+        padding: 24px;
+        border-radius: 22px;
+      }
+
+      h2 {
+        font-size: 1.4rem;
+      }
+
+      .about-text {
+        font-size: 0.95rem;
+        line-height: 1.8;
+      }
+
+      .links a {
+        width: 100%;
+        max-width: 320px;
       }
     }
   </style>
+
   <meta name="robots" content="noindex, nofollow">
 </head>
 
@@ -225,7 +259,7 @@
       <img src="logo1.png" alt="ピヨピヨランナーズ ロゴ">
     </div>
     <div>
-      <h1>ぴよぴよランナーズ</h1>
+      <h1>ピヨピヨランナーズ</h1>
       <p>ゆるく、楽しく、ピヨっと走ろう。</p>
     </div>
   </div>
@@ -235,16 +269,14 @@
 <section>
 
   <div class="card">
-    <h2>ぴよぴよランナーズとは？</h2>
-
+    <h2>ピヨピヨランナーズとは？</h2>
     <div class="about-text">
-      ぴよぴよランナーズは、初心者から経験者まで<br>
+      ピヨピヨランナーズは、初心者から経験者まで<br>
       「走るのが好き」「これから始めたい」人が集まる<br>
       ゆる系ランニングチームです。
     </div>
-
     <figure>
-      <img src="piyopiyo.jpg" alt="ぴよぴよランナーズの活動風景" loading="lazy">
+      <img src="piyopiyo.jpg" alt="活動風景" loading="lazy">
     </figure>
   </div>
 
@@ -252,7 +284,7 @@
     <h2>活動情報</h2>
     <ul class="info-list">
       <li>📅 平日 不定期（月2回）</li>
-      <li>📍 二重橋　</li>
+      <li>📍 二重橋</li>
       <li>⏱ 5〜10km</li>
       <li>🐢 主にサブスリーと3.5</li>
       <li>🙆 参加条件なし</li>
@@ -262,26 +294,20 @@
   <div class="card">
     <h2>参加はこちら</h2>
     <p>まずはお気軽に 🐤</p>
-
     <div class="links">
-      <a class="primary" href="https://form.run/@hiyorinchan--I2HJdKFwX2Qxrwt3DdNV" target="_blank">
-        Googleフォームで参加
-      </a>
-      <a class="line" href="https://line.me/ti/g2/-IaYlkaAXtKeJy0ErgXntJHVt-0S-v3ej_nI-w" target="_blank">
-        LINEオープンチャットで参加
-      </a>
-      <a class="instagram" href="https://www.instagram.com/hiyorinchan_27" target="_blank">
-        Instagramはこちら
-      </a>
+      <a class="primary" href="https://form.run/@hiyorinchan--I2HJdKFwX2Qxrwt3DdNV" target="_blank">Googleフォームで参加</a>
+      <a class="line" href="https://line.me/ti/g2/-IaYlkaAXtKeJy0ErgXntJHVt-0S-v3ej_nI-w" target="_blank">LINEオープンチャットで参加</a>
+      <a class="instagram" href="https://www.instagram.com/hiyorinchan_27" target="_blank">Instagramはこちら</a>
     </div>
   </div>
 
 </section>
 
 <footer>
-  © ぴよぴよランナーズ 🐣
+  © ピヨピヨランナーズ 🐣
   <span>走る理由は、ピヨっとでいい。</span>
 </footer>
 
 </body>
 </html>
+
