@@ -59,10 +59,10 @@
       box-shadow: 0 8px 20px rgba(0,0,0,0.12);
     }
 
-    /* ===== ロゴ（PC） ===== */
+    /* ===== ロゴ（修正版） ===== */
     .logo-wrap {
       width: 130px;
-      aspect-ratio: 1 / 1;
+      aspect-ratio: 1 / 1;   /* ← 高さ固定をやめる */
       background: linear-gradient(180deg, var(--yellow-soft), var(--yellow-soft-2));
       border-radius: 50%;
       display: flex;
@@ -119,6 +119,12 @@
       box-shadow: 0 10px 25px rgba(0,0,0,0.08);
       margin-bottom: 40px;
       text-align: center;
+      animation: up 0.8s ease both;
+    }
+
+    @keyframes up {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     .about-text {
@@ -128,7 +134,7 @@
       line-height: 2;
     }
 
-    /* ===== 写真（piyopiyo基準） ===== */
+    /* ===== 写真（完全同サイズ） ===== */
     .photo-block {
       display: flex;
       flex-direction: column;
@@ -137,9 +143,9 @@
       margin-top: 20px;
     }
 
-    .photo-same {
+    .same-size {
       width: 100%;
-      max-width: 520px;   /* ← piyopiyo.jpg の表示サイズ */
+      max-width: 520px;   /* piyopiyo.jpg 基準 */
       border-radius: 20px;
       box-shadow: 0 8px 20px rgba(0,0,0,0.1);
       height: auto;
@@ -178,6 +184,11 @@
       text-align: center;
       box-shadow: 0 6px 15px rgba(0,0,0,0.15);
       color: #fff;
+      transition: transform .2s;
+    }
+
+    .links a:hover {
+      transform: translateY(-3px);
     }
 
     .links a.primary { background: var(--google); }
@@ -198,18 +209,20 @@
       opacity: 0.7;
     }
 
-    /* ===== スマホ最適化 ===== */
+    /* ===== iPhone対応（ロゴ崩れ防止） ===== */
     @media (max-width: 480px) {
+      header {
+        padding: 60px 16px 90px;
+      }
 
       .hero {
         flex-direction: column;
+        gap: 14px;
         padding: 20px;
-        gap: 12px;
       }
 
-      /* ← ここが重要：スマホでは自然サイズ */
       .logo-wrap {
-        width: 96px;
+        width: 96px;   /* ← ここだけでOK。高さは自動 */
       }
 
       h1 {
@@ -222,6 +235,7 @@
 
       .card {
         padding: 24px;
+        border-radius: 22px;
       }
 
       h2 {
@@ -270,9 +284,30 @@
     </div>
 
     <figure class="photo-block">
-      <img src="piyopiyo.jpg" alt="活動風景" class="photo-same" loading="lazy">
-      <img src="logo2.jpg" alt="ぴよぴよランナーズ ビジュアル" class="photo-same">
+      <img src="piyopiyo.jpg" alt="活動風景" loading="lazy" class="same-size">
+      <img src="logo2.jpg" alt="ぴよぴよランナーズ ビジュアル" class="same-size">
     </figure>
+  </div>
+
+  <div class="card">
+    <h2>活動情報</h2>
+    <ul class="info-list">
+      <li>📅 平日 不定期（月2回）</li>
+      <li>📍 二重橋</li>
+      <li>⏱ 5〜10km</li>
+      <li>🐢 主にサブスリーと3.5</li>
+      <li>🙆 参加条件なし</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>参加はこちら</h2>
+    <p>まずはお気軽に 🐤</p>
+    <div class="links">
+      <a class="primary" href="https://form.run/@hiyorinchan--I2HJdKFwX2Qxrwt3DdNV" target="_blank">Googleフォームで参加</a>
+      <a class="line" href="https://line.me/ti/g2/-IaYlkaAXtKeJy0ErgXntJHVt-0S-v3ej_nI-w" target="_blank">LINEオープンチャットで参加</a>
+      <a class="instagram" href="https://www.instagram.com/hiyorinchan_27" target="_blank">Instagramはこちら</a>
+    </div>
   </div>
 
 </section>
