@@ -245,6 +245,20 @@
         width: 100%;
         max-width: 320px;
       }
+      .photo-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px; /* 写真とロゴの間 */
+  margin-top: 20px;
+}
+
+.photo-logo {
+  width: 180px;      /* 好みで調整OK */
+  max-width: 70%;
+  opacity: 0.95;
+}
+
     }
   </style>
 
@@ -278,6 +292,8 @@
     </div>
     <figure>
       <img src="piyopiyo.jpg" alt="活動風景" loading="lazy">
+
+      <img src="logo2.jpg" alt="ぴよぴよランナーズ サブロゴ" class="photo-logo">
     </figure>
   </div>
 
